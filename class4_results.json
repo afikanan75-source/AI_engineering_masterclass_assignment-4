@@ -1,0 +1,527 @@
+{
+  "prompt_tests": {
+    "v1": [
+      {
+        "message": "My order A1234 still hasn't arrived after 5 days.",
+        "want": [
+          "late_delivery",
+          "A1234"
+        ],
+        "got": [
+          "late_delivery",
+          "A1234"
+        ],
+        "correct": true
+      },
+      {
+        "message": "আমার অর্ডার #B7781 এখনও আসেনি।",
+        "want": [
+          "late_delivery",
+          "B7781"
+        ],
+        "got": [
+          "late_delivery",
+          "B7781"
+        ],
+        "correct": true
+      },
+      {
+        "message": "I got a blue shirt but I ordered black. Order C2020.",
+        "want": [
+          "wrong_item",
+          "C2020"
+        ],
+        "got": [
+          "wrong_item",
+          "C2020"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The product arrived broken, I want my money back. Order D5501",
+        "want": [
+          "refund",
+          "D5501"
+        ],
+        "got": [
+          "refund",
+          "D5501"
+        ],
+        "correct": true
+      },
+      {
+        "message": "bKash থেকে টাকা দুইবার কেটেছে, অর্ডার E3003",
+        "want": [
+          "payment",
+          "E3003"
+        ],
+        "got": [
+          "payment",
+          "E3003"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Can I change my delivery address?",
+        "want": [
+          "other",
+          null
+        ],
+        "got": [
+          "other",
+          null
+        ],
+        "correct": true
+      },
+      {
+        "message": "অর্ডার নম্বর ৪৫৬৭, ভুল সাইজ পাঠিয়েছেন।",
+        "want": [
+          "wrong_item",
+          "4567"
+        ],
+        "got": [
+          "wrong_item",
+          "4567"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Order H4545 was supposed to come yesterday, ki obostha?",
+        "want": [
+          "late_delivery",
+          "H4545"
+        ],
+        "got": [
+          "late_delivery",
+          "H4545"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The phone arrived with a cracked screen. Please send a new one. Order J3141",
+        "want": [
+          "wrong_item",
+          "J3141"
+        ],
+        "got": [
+          "other",
+          "J3141"
+        ],
+        "correct": false
+      },
+      {
+        "message": "I ordered 3 packets of tea but only 2 came. Order K2718",
+        "want": [
+          "wrong_item",
+          "K2718"
+        ],
+        "got": [
+          "wrong_item",
+          "K2718"
+        ],
+        "correct": true
+      },
+      {
+        "message": "ডেলিভারি ম্যান অতিরিক্ত ৫০ টাকা চাইলো। অর্ডার L1618",
+        "want": [
+          "payment",
+          "L1618"
+        ],
+        "got": [
+          "payment",
+          "L1618"
+        ],
+        "correct": true
+      },
+      {
+        "message": "When will the refund for order m4040 reach my bKash?",
+        "want": [
+          "refund",
+          "M4040"
+        ],
+        "got": [
+          "refund",
+          "m4040"
+        ],
+        "correct": false
+      },
+      {
+        "message": "Order N5050 came damaged, the box was crushed.",
+        "want": [
+          "wrong_item",
+          "N5050"
+        ],
+        "got": [
+          "other",
+          "N5050"
+        ],
+        "correct": false
+      },
+      {
+        "message": "অর্ডার P6060 এর রিফান্ড কবে পাবো? এক সপ্তাহ আগে চেয়েছি।",
+        "want": [
+          "refund",
+          "P6060"
+        ],
+        "got": [
+          "refund",
+          "P6060"
+        ],
+        "correct": true
+      }
+    ],
+    "v2": [
+      {
+        "message": "My order A1234 still hasn't arrived after 5 days.",
+        "want": [
+          "late_delivery",
+          "A1234"
+        ],
+        "got": [
+          "late_delivery",
+          "A1234"
+        ],
+        "correct": true
+      },
+      {
+        "message": "আমার অর্ডার #B7781 এখনও আসেনি।",
+        "want": [
+          "late_delivery",
+          "B7781"
+        ],
+        "got": [
+          "late_delivery",
+          "B7781"
+        ],
+        "correct": true
+      },
+      {
+        "message": "I got a blue shirt but I ordered black. Order C2020.",
+        "want": [
+          "wrong_item",
+          "C2020"
+        ],
+        "got": [
+          "wrong_item",
+          "C2020"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The product arrived broken, I want my money back. Order D5501",
+        "want": [
+          "refund",
+          "D5501"
+        ],
+        "got": [
+          "refund",
+          "D5501"
+        ],
+        "correct": true
+      },
+      {
+        "message": "bKash থেকে টাকা দুইবার কেটেছে, অর্ডার E3003",
+        "want": [
+          "payment",
+          "E3003"
+        ],
+        "got": [
+          "payment",
+          "E3003"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Can I change my delivery address?",
+        "want": [
+          "other",
+          null
+        ],
+        "got": [
+          "other",
+          null
+        ],
+        "correct": true
+      },
+      {
+        "message": "অর্ডার নম্বর ৪৫৬৭, ভুল সাইজ পাঠিয়েছেন।",
+        "want": [
+          "wrong_item",
+          "4567"
+        ],
+        "got": [
+          "wrong_item",
+          null
+        ],
+        "correct": false
+      },
+      {
+        "message": "Order H4545 was supposed to come yesterday, ki obostha?",
+        "want": [
+          "late_delivery",
+          "H4545"
+        ],
+        "got": [
+          "late_delivery",
+          "H4545"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The phone arrived with a cracked screen. Please send a new one. Order J3141",
+        "want": [
+          "wrong_item",
+          "J3141"
+        ],
+        "got": [
+          "wrong_item",
+          "J3141"
+        ],
+        "correct": true
+      },
+      {
+        "message": "I ordered 3 packets of tea but only 2 came. Order K2718",
+        "want": [
+          "wrong_item",
+          "K2718"
+        ],
+        "got": [
+          "wrong_item",
+          "K2718"
+        ],
+        "correct": true
+      },
+      {
+        "message": "ডেলিভারি ম্যান অতিরিক্ত ৫০ টাকা চাইলো। অর্ডার L1618",
+        "want": [
+          "payment",
+          "L1618"
+        ],
+        "got": [
+          "payment",
+          "L1618"
+        ],
+        "correct": true
+      },
+      {
+        "message": "When will the refund for order m4040 reach my bKash?",
+        "want": [
+          "refund",
+          "M4040"
+        ],
+        "got": [
+          "refund",
+          "M4040"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Order N5050 came damaged, the box was crushed.",
+        "want": [
+          "wrong_item",
+          "N5050"
+        ],
+        "got": [
+          "wrong_item",
+          "N5050"
+        ],
+        "correct": true
+      },
+      {
+        "message": "অর্ডার P6060 এর রিফান্ড কবে পাবো? এক সপ্তাহ আগে চেয়েছি।",
+        "want": [
+          "refund",
+          "P6060"
+        ],
+        "got": [
+          "refund",
+          "P6060"
+        ],
+        "correct": true
+      }
+    ],
+    "v3": [
+      {
+        "message": "My order A1234 still hasn't arrived after 5 days.",
+        "want": [
+          "late_delivery",
+          "A1234"
+        ],
+        "got": [
+          "late_delivery",
+          "A1234"
+        ],
+        "correct": true
+      },
+      {
+        "message": "আমার অর্ডার #B7781 এখনও আসেনি।",
+        "want": [
+          "late_delivery",
+          "B7781"
+        ],
+        "got": [
+          "late_delivery",
+          "B7781"
+        ],
+        "correct": true
+      },
+      {
+        "message": "I got a blue shirt but I ordered black. Order C2020.",
+        "want": [
+          "wrong_item",
+          "C2020"
+        ],
+        "got": [
+          "wrong_item",
+          "C2020"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The product arrived broken, I want my money back. Order D5501",
+        "want": [
+          "refund",
+          "D5501"
+        ],
+        "got": [
+          "refund",
+          "D5501"
+        ],
+        "correct": true
+      },
+      {
+        "message": "bKash থেকে টাকা দুইবার কেটেছে, অর্ডার E3003",
+        "want": [
+          "payment",
+          "E3003"
+        ],
+        "got": [
+          "payment",
+          "E3003"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Can I change my delivery address?",
+        "want": [
+          "other",
+          null
+        ],
+        "got": [
+          "other",
+          null
+        ],
+        "correct": true
+      },
+      {
+        "message": "অর্ডার নম্বর ৪৫৬৭, ভুল সাইজ পাঠিয়েছেন।",
+        "want": [
+          "wrong_item",
+          "4567"
+        ],
+        "got": [
+          "wrong_item",
+          "4567"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Order H4545 was supposed to come yesterday, ki obostha?",
+        "want": [
+          "late_delivery",
+          "H4545"
+        ],
+        "got": [
+          "late_delivery",
+          "H4545"
+        ],
+        "correct": true
+      },
+      {
+        "message": "The phone arrived with a cracked screen. Please send a new one. Order J3141",
+        "want": [
+          "wrong_item",
+          "J3141"
+        ],
+        "got": [
+          "wrong_item",
+          "J3141"
+        ],
+        "correct": true
+      },
+      {
+        "message": "I ordered 3 packets of tea but only 2 came. Order K2718",
+        "want": [
+          "wrong_item",
+          "K2718"
+        ],
+        "got": [
+          "wrong_item",
+          "K2718"
+        ],
+        "correct": true
+      },
+      {
+        "message": "ডেলিভারি ম্যান অতিরিক্ত ৫০ টাকা চাইলো। অর্ডার L1618",
+        "want": [
+          "payment",
+          "L1618"
+        ],
+        "got": [
+          "payment",
+          "L1618"
+        ],
+        "correct": true
+      },
+      {
+        "message": "When will the refund for order m4040 reach my bKash?",
+        "want": [
+          "refund",
+          "M4040"
+        ],
+        "got": [
+          "refund",
+          "M4040"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Order N5050 came damaged, the box was crushed.",
+        "want": [
+          "wrong_item",
+          "N5050"
+        ],
+        "got": [
+          "wrong_item",
+          "N5050"
+        ],
+        "correct": true
+      },
+      {
+        "message": "অর্ডার P6060 এর রিফান্ড কবে পাবো? এক সপ্তাহ আগে চেয়েছি।",
+        "want": [
+          "refund",
+          "P6060"
+        ],
+        "got": [
+          "refund",
+          "P6060"
+        ],
+        "correct": true
+      },
+      {
+        "message": "Rider was extremely rude and refused to come to the 4th floor. Order R8822",
+        "want": [
+          "other",
+          "R8822"
+        ],
+        "got": [
+          "other",
+          "R8822"
+        ],
+        "correct": true
+      }
+    ]
+  },
+  "spent_usd": 0.004009775000000002
+}
